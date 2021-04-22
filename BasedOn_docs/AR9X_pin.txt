@@ -1,0 +1,32 @@
+Corrected AR9X/ARUNI Connector Pin Labels
+-----------------------------------------
+
+                             ARUNI Schematic
+           AR9X Schematic   (Rev C pin Labels)    MPU Pin     ADC Ch. No.
+Sticks
+  LV           J3-2         J4-2 (P-ELV_STK)      PA22/AD9         1
+  LH           J3-3         J4-3 (P-RUD_STK)      PA19/AD2         0
+  RV           J6-2         J6-2 (H-THR_STK)      PC30/AD14        2
+  RH           J6-3         J6-3 (H-AIL_STK)      PA18/AD1         3
+
+Pots
+  P1           J2-10        J18-2 (F-PO_1)        PA20/AD3         4
+  P2           J2-8         J18-4 (F-PO_3)        PC29/AD13        5
+  P3           J8-2         J18-3 (F-PO_2)        PB1/AD5          6
+
+Trims
+  LVT-U        J3-7         J4-5 (P-ELV_T_DN)     PC28
+  LVT-D        J3-9         J4-4 (P-ELV_T_UP)     PA24
+  LHT-L        J3-5         J4-7 (P-RUD_T_L)      PA23
+  LHT-R        J3-6         J4-6 (P-RUD_T_R)      PB4
+  RVT-U        J6-7         J6-5 (H-THR_T_DN)     PA1
+  RVT-D        J6-9         J6-4 (H-THR_T_UP)     PC10
+  RHT-L        J6-6         J6-7 (H-AIL_T_L)      PA0
+  RHT-R        J6-5         J6-6 (H-AIL_T_R)      PC9
+
+
+NOTE: ARUNI Rev C pin label diagram's:
+    - Pots PO_2 and PO_3 got swapped
+    - Vertical(ELV/THR) trims' UP/DN got swapped
+    - C-RFPWR and C-Board labels got swapped.
+

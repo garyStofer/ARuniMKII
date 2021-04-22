@@ -1,0 +1,1 @@
+These are the latest tools and FW for this board as of  4-2021 -- see er9x.com for more recent versions
