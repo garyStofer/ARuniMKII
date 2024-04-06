@@ -28552,6 +28552,17 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="218.44" y="177.8" size="1.27" layer="97">footprint for audio amp u3 is wrong Pin 6 an pin 8 are swapped . VCC on pin 6 , Vout- on pin 8</text>
 <text x="309.88" y="71.12" size="1.27" layer="97">CN1 pin 2 : use for ID2 connection to 3 way switch Aux2</text>
 <text x="81.28" y="-10.16" size="1.778" layer="97">See page 2 for Info on Cut/Jumper and external connections etc..</text>
+<text x="220.98" y="38.1" size="1.27" layer="91" rot="R90">contacts on bottom</text>
+<text x="228.6" y="-12.7" size="1.778" layer="91" rot="R180">Cut &amp; Jumper R12 over to PWRSW_ON_B to not have the battery voltage being recorded incorrectly in EEPROM during power down sequence</text>
+<text x="27.94" y="121.92" size="1.778" layer="91" rot="R180">R12 -- See note below</text>
+<text x="-5.08" y="83.82" size="1.778" layer="91" rot="R180">Pin5 is RF_MODULE power</text>
+<wire x1="33.02" y1="111.76" x2="27.94" y2="111.76" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="111.76" x2="27.94" y2="116.84" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="116.84" x2="17.78" y2="116.84" width="0.1524" layer="97"/>
+<wire x1="28.448" y1="110.236" x2="29.972" y2="108.458" width="0.1524" layer="97"/>
+<wire x1="28.194" y1="108.458" x2="29.464" y2="109.982" width="0.1524" layer="97"/>
+<wire x1="29.464" y1="109.982" x2="29.464" y2="110.236" width="0.1524" layer="97"/>
+<text x="218.44" y="172.72" size="1.778" layer="91">Remove R3 For more volume</text>
 </plain>
 <instances>
 <instance part="CN6" gate="G$1" x="251.46" y="43.18" smashed="yes" rot="MR0">
@@ -29071,10 +29082,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="118.11" y="166.37" size="1.4224" layer="95"/>
 </instance>
 <instance part="KEY_RIGHT" gate="G$1" x="246.38" y="22.86" smashed="yes">
-<attribute name="NAME" x="259.08" y="22.86" size="1.4224" layer="95"/>
+<attribute name="NAME" x="256.54" y="22.86" size="1.4224" layer="95"/>
 </instance>
 <instance part="KEY_LEFT" gate="G$1" x="246.38" y="20.32" smashed="yes">
-<attribute name="NAME" x="259.08" y="20.32" size="1.4224" layer="95"/>
+<attribute name="NAME" x="256.54" y="20.32" size="1.4224" layer="95"/>
 </instance>
 <instance part="RF-6V" gate="G$1" x="17.78" y="88.9" smashed="yes">
 <attribute name="NAME" x="9.652" y="89.154" size="1.4224" layer="95"/>
@@ -29760,7 +29771,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="7.62" y="114.3" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="PWR_SW_BAT" class="0">
+<net name="PWR_SW_CTR_A&amp;B" class="0">
 <segment>
 <pinref part="CN9" gate="G$1" pin="4"/>
 <label x="7.62" y="106.68" size="1.27" layer="95"/>
@@ -30871,7 +30882,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="274.32" y="129.54"/>
 </segment>
 </net>
-<net name="RF_MODULE_PWR" class="0">
+<net name="PWRSW_ON_A" class="0">
 <segment>
 <pinref part="CN9" gate="G$1" pin="3"/>
 <wire x1="7.62" y1="109.22" x2="25.4" y2="109.22" width="0.1524" layer="91"/>
@@ -31269,7 +31280,7 @@ etc, etc</text>
 <text x="-30.48" y="22.86" size="1.27" layer="97">Adjust R11,R12 for correct battery voltage readout </text>
 <text x="-30.48" y="25.4" size="1.27" layer="97">Adjust R23,R24 so that current consumption reading roughly corresponds to actual consumption -- Or ad circuitry INA138 -- disconnect trace from CN4 pin1</text>
 <text x="-30.48" y="50.8" size="1.27" layer="97">Need to install CN6,7,8 &amp; 9 (vertical ones) 180 deg. turned so that pin 1 becomes pin-N. or install on the back of the PCB for the same reason. </text>
-<text x="-30.48" y="45.72" size="1.27" layer="97">Explenation:Recorded the pin numbers incorrectrly for the horizontal Connectors AND Library elements for JST-N_PTH_VERT are opposite of what JR used. 
+<text x="-30.48" y="45.72" size="1.27" layer="97">Explanation:Recorded the pin numbers incorrectrly for the horizontal Connectors AND Library elements for JST-N_PTH_VERT are opposite of what JR used. 
 Therefore the two mistakes neutralized thenselves on the horizontal connectors but not on the vertical ones .</text>
 <text x="109.22" y="53.34" size="1.016" layer="96">TRN_BTN needs to be normally closed </text>
 <text x="109.22" y="48.26" size="1.27" layer="97">Keys EXT1,2,3 are broke out on LCD adapter but do not need to be connected </text>
@@ -31278,7 +31289,8 @@ Therefore the two mistakes neutralized thenselves on the horizontal connectors b
 <text x="109.22" y="45.72" size="1.27" layer="97">THR_CUT needs to be normally closed , or tied to GND if not connected </text>
 <text x="109.22" y="43.18" size="1.27" layer="97">PPM1 is referred to as "External" in Firmware</text>
 <text x="109.22" y="40.64" size="1.27" layer="97">PPM2 is referred to as Internal in FW</text>
-<text x="109.22" y="38.1" size="1.27" layer="97">The 4 required nav buttons are Menu/Ent, up, down. Left and right is not needed if rotary encoder is present.</text>
+<text x="109.22" y="38.1" size="1.27" layer="97">The 4 required nav buttons are Menu/Ent, up, down. Left and right is not strictly  needed if rotary encoder is present.</text>
+<text x="-30.48" y="17.78" size="1.27" layer="150">Connect RX2 to signal labeled RF6V from RF bay - needed for MultiModul telemetry. Also make path for signal on RF bay</text>
 </plain>
 <instances>
 </instances>
